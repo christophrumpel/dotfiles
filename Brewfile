@@ -22,14 +22,8 @@ brew 'zsh'
 brew 'zsh-completions'
 
 # Development
-brew 'php'
-brew 'php@8.0'
-brew 'php@8.1'
 brew 'composer'
-brew 'mysql'
-brew 'nginx'
 brew 'node'
-brew 'redis'
 brew 'yarn'
 
 # Apps
@@ -42,7 +36,6 @@ cask 'dropbox'
 cask 'elgato-wave-link'
 cask 'elgato-stream-deck'
 cask 'elgato-control-center'
-cask 'expressvpn'
 cask 'firefox'
 cask 'gifox'
 cask 'google-chrome'
