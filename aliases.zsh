@@ -37,6 +37,7 @@ alias home="cd ~/"
 alias gotodotfiles="cd ~/.dotfiles"
 alias gotosites="cd ~/Sites"
 alias gototests="cd ~/Sites/Tests"
+alias gotojary="ce ~/Sites/jarvy"/jarvy"/jarvy"/jarvy"/jarvy"/jarvy"/jarvy"
 
 alias subldotfiles="subl ~/.dotfiles"
 
@@ -85,6 +86,7 @@ gsa ()
 #-----------------------------------------------------------------------------------#
 
 alias art='php artisan'
+alias artv='php artisan --version'
 alias mfs='php artisan migrate:fresh --seed'
 alias artclearall='php artisan cache:clear && php artisan view:clear && php artisan config:clear'
 alias phpunit='vendor/bin/phpunit'
