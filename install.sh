@@ -16,6 +16,10 @@ echo "Installing Starship..."
 if command -v starship &> /dev/null; then
     echo "Starship is already installed"
 else
+    # Create /usr/local/bin if it doesn't exist
+    echo "Creating /usr/local/bin directory..."
+    sudo mkdir -p /usr/local/bin
+
     # Install Starship
     if curl -sS https://starship.rs/install.sh | sh; then
         echo "Starship installed successfully"
