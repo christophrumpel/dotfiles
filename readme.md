@@ -16,21 +16,17 @@ Be careful when using these dotfiles because they change a lot of MacOS settings
 ## Installation
 
 1. `Update macOS` to the latest version with the App Store
-2. `Create new SSH keys` or copy given ones to `SSH keys to ~/.ssh` and make sure they're set to 600
-```zsh
-   curl https://raw.githubusercontent.com/christophrumpel/dotfiles/master/ssh.sh | sh -s "christoph@christoph-rumpel.com"
-   ```
-3. `Sign to 1Password` and add new SSH keys to GitHub (for loading private repos)
-4. `Clone dotfiles` to ~/.dotfiles (you will be asked to download command line tools)
+2. `Create new SSH keys` or use given ones. (e.g. 1Password SSH Agent)
+3. `Clone dotfiles` to ~/.dotfiles (you will be asked to download command line tools)
     ```zsh
     git clone https://github.com/christophrumpel/dotfiles.git ~/.dotfiles
     ```
-5. `Run Installation` script
+4. `Run Installation` script
     ```zsh
     ~/.dotfiles/install.sh
     ```
-6. `Log in to Dropbox` and sync folders
-7. `Restart your computer` to finalize  the process
+5. `Log in to Dropbox` and sync folders
+6. `Restart your computer` to finalize  the process
 
 
 ## Additional Steps
