@@ -8,13 +8,10 @@ Be careful when using these dotfiles because they change a lot of MacOS settings
 
 - Did you commit and push any changes/branches to your git repositories?
 - Did you copy your .env files to a safe place if they are not casual?
-- Did you copy your IDE settings? (e.g. PhpStorm)
+- Did you backup your IDE settings? (e.g. PhpStorm)
 - Did you backup local databases you need?
 - Did you remember to save all important documents from non-cloud directories?
 - Did you save all of your work from apps which aren't synced through cloud?
-    + Insomnia (Export to Dropbox)
-- Did you update [mackup](https://github.com/lra/mackup) to the latest version and ran `mackup backup`?
-- Create "Brave Sync" QR Code (Settings / Sync)
 
 ## Installation
 
@@ -33,32 +30,23 @@ Be careful when using these dotfiles because they change a lot of MacOS settings
     ~/.dotfiles/install.sh
     ```
 6. `Log in to Dropbox` and sync folders
-7. `Sync Mackup` Folder (from Dropbox)
-8. `Restore Mac settings" After mackup is synced with your cloud storage, by running `mackup restore`
-9. `Restart your computer` to finalize the process
+7. `Restart your computer` to finalize  the process
 
 
 ## Additional Steps
 
 - Install apps manually
     - Davinci Resolve
-    - Ecamm Live
-    - Descript
     - Pixelmator Pro Demo (Dropbox/Backups)
 - Custom Settings
-    - Spark: Log in with your main email account to load the others
-    - Brave: Using created Sync QR code to sync extensions
     - Copy ssh config from 1Password to `~/.ssh/config`
     - PhpStorm: enable repository sync `https://github.com/christophrumpel/phpstorm-settings`
 - Set Permissions
     - Bartender
-    - Alfred
 
 ## Still Missing
 
 - Activate right mouse click
 - Sleep time missmatch/error
-- Rectangle settings?
 - Operator Mono font
 - Disable Mac sounds
-- Modifier keys: Switch caps lock to Esc, possible through commandline?
