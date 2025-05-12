@@ -55,6 +55,7 @@ cask 'zoom'
 
 # Fonts
 cask 'font-fira-code'
+cask 'font-fira-code-nerd-font'
 cask 'font-lato'
 
 # Install Mac App Store apps

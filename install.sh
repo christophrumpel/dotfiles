@@ -2,12 +2,27 @@
 
 echo "Setting up your Mac ❤️..."
 
-# Check for Homebrew and install if we don't have it	
+# Check for Homebrew and install if we don't have it
+echo "Installing Homebrew..."
 if test ! $(which brew); then	
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Install Starship
+echo "Installing Starship..."
+if command -v starship &> /dev/null; then
+    echo "Starship is already installed"
+else
+    # Install Starship to default location
+    if curl -sS https://starship.rs/install.sh | sh -s -- --yes; then
+        echo "Starship installed successfully"
+    else
+        echo "Failed to install Starship" >&2
+        exit 1
+    fi
 fi
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
