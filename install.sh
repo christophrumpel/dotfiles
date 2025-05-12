@@ -16,14 +16,15 @@ echo "Installing Starship..."
 if command -v starship &> /dev/null; then
     echo "Starship is already installed"
 else
-    # Install Starship to default location
-    if curl -sS https://starship.rs/install.sh | sh -s -- --yes; then
+    # Install Starship with specified binary directory
+    if curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir /data/data/com.termux/files/usr/bin; then
         echo "Starship installed successfully"
     else
         echo "Failed to install Starship" >&2
         exit 1
     fi
 fi
+
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
