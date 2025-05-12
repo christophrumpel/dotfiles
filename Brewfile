@@ -1,8 +1,5 @@
 # Taps
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/bundle'
+# Only keep the non-standard tap
 tap 'nicoverbruggen/homebrew-cask'
 
 # Install Binaries
@@ -39,6 +36,7 @@ cask 'herd'
 cask 'imageoptim'
 cask 'hyper'
 cask 'adoptopenjdk'
+cask 'mas'
 cask 'now'
 cask 'phpstorm'
 cask 'ray'

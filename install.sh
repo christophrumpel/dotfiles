@@ -37,9 +37,9 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 brew update
 
 # Install all the dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
-brew tap homebrew/cask-drivers
+echo "Installing Homebrew packages..."
 brew bundle --file $HOME/.dotfiles/Brewfile
+
 
 # Create a Sites directories	
 mkdir $HOME/Sites
