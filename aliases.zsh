@@ -37,25 +37,11 @@ alias home="cd ~/"
 alias gotodotfiles="cd ~/.dotfiles"
 alias gotosites="cd ~/Sites"
 alias gototests="cd ~/Sites/Tests"
-alias gotojary="ce ~/Sites/jarvy"/jarvy"/jarvy"/jarvy"/jarvy"/jarvy"/jarvy"
-
-alias subldotfiles="subl ~/.dotfiles"
+alias gotojary="cd ~/Sites/jarvy"
 
 #-----------------------------------------------------------------------------------#
 #	*END* GOTO
 #-----------------------------------------------------------------------------------#
-
-
-#-----------------------------------------------------------------------------------#
-#	*START* Mac MySQL
-#-----------------------------------------------------------------------------------#
-
-alias killmysql='killall -9 mysqld'
-
-#-----------------------------------------------------------------------------------#
-#	*END* Mac MySQL
-#-----------------------------------------------------------------------------------#
-
 
 #-----------------------------------------------------------------------------------#
 #	*START* GIT
@@ -159,7 +145,7 @@ fi
 
 
 #-----------------------------------------------------------------------------------#
-#	*END* Seach & List
+#	*END* Search & List
 #-----------------------------------------------------------------------------------#
 
 
@@ -167,14 +153,8 @@ fi
 #	*START* FILE HANDLING
 #-----------------------------------------------------------------------------------#
 
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
-
 # File size
 alias fs="stat -f \"%z bytes\""
-
-# Empty the Trash on all mounted volumes and the main HDD
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 
 # Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
