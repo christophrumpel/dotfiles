@@ -21,6 +21,7 @@ brew 'node'
 brew 'yarn'
 
 # Apps
+cas '1password'
 cask 'bartender'
 cask 'brave-browser'
 cask 'cleanshot'
@@ -55,7 +56,6 @@ cask 'font-jetbrains-mono'
 cask 'font-bitter'
 
 # Install Mac App Store apps
-mas '1Password', id: 1333542190
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Pages', id:409201541
