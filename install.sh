@@ -56,4 +56,4 @@ mkdir $HOME/Sites/Forks
 
 # Set macOS preferences	
 # We will run this last because this will reload the shell	
-source .macos
+source $HOME/.dotfiles/.macos
