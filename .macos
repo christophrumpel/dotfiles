@@ -133,9 +133,6 @@ defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
-# Set the timezone
-sudo systemsetup -settimezone "Europe/Vienna" > /dev/null
-
 ###############################################################################
 # Energy saving                                                               #
 ###############################################################################
