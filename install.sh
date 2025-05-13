@@ -79,6 +79,13 @@ else
     echo "Warning: iTerm2 color preset not found at $COLORS_SOURCE"
 fi
 
+# Margins
+defaults write com.googlecode.iterm2 TerminalMargin -int 50
+defaults write com.googlecode.iterm2 TerminalVMargin -int 20
+
+# Set to minimal appearance theme
+defaults write com.googlecode.iterm2 TabStyleWithAutomaticOption -int 5
+
 # Create a Sites directories	
 mkdir $HOME/Sites
 mkdir $HOME/Sites/Tests	
