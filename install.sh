@@ -57,7 +57,7 @@ echo "Setting up iTerm..."
 ITERM_PROFILES_DIR="$HOME/Library/Application Support/iTerm2/DynamicProfiles"
 ITERM_COLORS_DIR="$HOME/Library/Application Support/iTerm2/DynamicColorPresets"
 PROFILE_SOURCE="$HOME/.dotfiles/support/cr_iterm_profile.json"
-COLORS_SOURCE="$HOME/.dotfiles/support/cr_iterm_colors.itermcolors"
+COLORS_SOURCE="$HOME/.dotfiles/support/lovelace.itermcolors"
 
 # Create directories if they don't exist
 mkdir -p "$ITERM_PROFILES_DIR"
