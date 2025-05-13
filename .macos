@@ -24,6 +24,10 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 sudo nvram SystemAudioVolume=" "
 defaults write "com.apple.systemsound" "com.apple.sound.uiaudio.enabled" -int 0
 
+# Auto-hide the menu bar
+defaults write NSGlobalDomain "_HIHideMenuBar" -bool true
+defaults write NSGlobalDomain "AppleMenuBarVisibleInFullscreen" -bool false
+
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
