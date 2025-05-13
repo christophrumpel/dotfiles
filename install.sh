@@ -47,24 +47,37 @@ brew update
 echo "Installing Homebrew packages..."
 brew bundle --file $HOME/.dotfiles/Brewfile
 
-# Set up iTerm2 profile
+# Setup iTerm
+echo "Setting up iTerm..."
+
+# Disable "Last login" message
+[ ! -f ~/.hushlogin ] && touch ~/.hushlogin
+
+# Set up iTerm2 directories
 ITERM_PROFILES_DIR="$HOME/Library/Application Support/iTerm2/DynamicProfiles"
+ITERM_COLORS_DIR="$HOME/Library/Application Support/iTerm2/DynamicColorPresets"
 PROFILE_SOURCE="$HOME/.dotfiles/support/cr_iterm_profile.json"
-PROFILE_DEST="$ITERM_PROFILES_DIR/cr_iterm_profile.json"
+COLORS_SOURCE="$HOME/.dotfiles/support/cr_iterm_colors.itermcolors"
 
-if [ ! -d "$ITERM_PROFILES_DIR" ]; then
-    echo "Creating iTerm2 Dynamic Profiles directory..."
-    mkdir -p "$ITERM_PROFILES_DIR"
-fi
+# Create directories if they don't exist
+mkdir -p "$ITERM_PROFILES_DIR"
+mkdir -p "$ITERM_COLORS_DIR"
 
+# Install profile
 if [ -f "$PROFILE_SOURCE" ]; then
     echo "Installing iTerm2 profile..."
-    # Wrap the profile content in the required format
-    echo "{\"Profiles\": [$(cat "$PROFILE_SOURCE")]}" > "$PROFILE_DEST"
+    echo "{\"Profiles\": [$(cat "$PROFILE_SOURCE")]}" > "$ITERM_PROFILES_DIR/cr_iterm_profile.json"
 else
     echo "Warning: iTerm2 profile not found at $PROFILE_SOURCE"
 fi
 
+# Install color preset
+if [ -f "$COLORS_SOURCE" ]; then
+    echo "Installing iTerm2 color preset..."
+    cp "$COLORS_SOURCE" "$ITERM_COLORS_DIR/"
+else
+    echo "Warning: iTerm2 color preset not found at $COLORS_SOURCE"
+fi
 
 # Create a Sites directories	
 mkdir $HOME/Sites
