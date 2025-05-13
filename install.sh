@@ -2,6 +2,13 @@
 
 echo "Setting up your Mac ❤️..."
 
+# Ask for the administrator password upfront
+echo "We need your password for some installation steps..."
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until script has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # Check for Homebrew and install if we don't have it
 echo "Installing Homebrew..."
 if test ! $(which brew); then	
@@ -46,9 +53,6 @@ mkdir $HOME/Sites
 mkdir $HOME/Sites/Tests	
 mkdir $HOME/Sites/Packages	
 mkdir $HOME/Sites/Forks
-
-# Clone Github repositories	
-./clone.sh
 
 # Set macOS preferences	
 # We will run this last because this will reload the shell	

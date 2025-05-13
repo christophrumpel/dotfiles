@@ -35,8 +35,6 @@ cask 'herd'
 cask 'imageoptim'
 cask 'hyper'
 cask 'adoptopenjdk'
-cask 'mas'
-cask 'now'
 cask 'phpstorm'
 cask 'ray'
 cask 'raycast'
@@ -54,6 +52,8 @@ cask 'zoom'
 cask 'font-fira-code'
 cask 'font-fira-code-nerd-font'
 cask 'font-lato'
+cask 'font-jetbrains-mono'
+cask 'font-bitter'
 
 # Install Mac App Store apps
 mas '1Password', id: 1333542190
