@@ -47,6 +47,24 @@ brew update
 echo "Installing Homebrew packages..."
 brew bundle --file $HOME/.dotfiles/Brewfile
 
+# Set up iTerm2 profile
+ITERM_PROFILES_DIR="$HOME/Library/Application Support/iTerm2/DynamicProfiles"
+PROFILE_SOURCE="$HOME/.dotfiles/support/cr_iterm_profile.json"
+PROFILE_DEST="$ITERM_PROFILES_DIR/cr_iterm_profile.json"
+
+if [ ! -d "$ITERM_PROFILES_DIR" ]; then
+    echo "Creating iTerm2 Dynamic Profiles directory..."
+    mkdir -p "$ITERM_PROFILES_DIR"
+fi
+
+if [ -f "$PROFILE_SOURCE" ]; then
+    echo "Installing iTerm2 profile..."
+    # Wrap the profile content in the required format
+    echo "{\"Profiles\": [$(cat "$PROFILE_SOURCE")]}" > "$PROFILE_DEST"
+else
+    echo "Warning: iTerm2 profile not found at $PROFILE_SOURCE"
+fi
+
 
 # Create a Sites directories	
 mkdir $HOME/Sites
