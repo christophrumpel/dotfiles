@@ -31,6 +31,7 @@ Be careful when using these dotfiles because they change a lot of MacOS settings
     ```
 6. `Log in to Dropbox` and sync folders
 7. `Restart your computer` to finalize  the process
+8. `Set up Raycast`
 
 
 ## Additional Steps
