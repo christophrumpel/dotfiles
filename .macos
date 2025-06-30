@@ -20,9 +20,11 @@ sudo scutil --set HostName "mbp-christoph"
 sudo scutil --set LocalHostName "mbp-christoph"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook-Christoph"
 
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
-defaults write "com.apple.systemsound" "com.apple.sound.uiaudio.enabled" -int 0
+# Disable the sound effects on boot (Apple Silicon)
+sudo nvram StartupMute=%01
+
+# Disable UI sound effects
+defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -int 0
 
 # Auto-hide the menu bar
 defaults write NSGlobalDomain "_HIHideMenuBar" -bool true
