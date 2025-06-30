@@ -24,7 +24,7 @@ Be careful when using these dotfiles because they change a lot of MacOS settings
     ```zsh
     ~/.dotfiles/install.sh
     ```
-4. Enable `1Password SSH Agent`
+4. Install 1Password & enable `1Password SSH Agent` (check if it works with `ssh -vv git@github.com`)
 5. `Run clone script` to install needed repos
     ```zsh
    ~/.dotfiles/clone.sh
