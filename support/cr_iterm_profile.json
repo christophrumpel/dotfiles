@@ -50,11 +50,11 @@
     "Green Component" : 0.26666668057441711
   },
   "Background Color" : {
-    "Red Component" : 0.97999999999999998,
+    "Red Component" : 0.11372549086809158,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.97999999999999998,
+    "Blue Component" : 0.15686275064945221,
     "Alpha Component" : 1,
-    "Green Component" : 0.97999999999999998
+    "Green Component" : 0.12156862765550613
   },
   "Columns" : 80,
   "Ansi 8 Color" : {
@@ -247,7 +247,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.86970102787017822
   },
-  "Default Bookmark" : "No",
+  "Default Bookmark" : "Yes",
   "Foreground Color (Light)" : {
     "Red Component" : 0.99215686321258545,
     "Color Space" : "sRGB",
@@ -345,7 +345,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.23660069704055786
   },
-  "Name" : "Default",
+  "Name" : "Christoph",
   "Transparency" : 0,
   "Horizontal Spacing" : 1,
   "Cursor Color (Dark)" : {
