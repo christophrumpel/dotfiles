@@ -86,6 +86,10 @@ defaults write com.googlecode.iterm2 TerminalVMargin -int 20
 # Set to minimal appearance theme
 defaults write com.googlecode.iterm2 TabStyleWithAutomaticOption -int 5
 
+# Delete the default profile and set Christoph as default
+defaults delete com.googlecode.iterm2 "New Bookmarks" 2>/dev/null || true
+defaults write com.googlecode.iterm2 "Default Bookmark Guid" "D363B624-E4D1-4F61-B2F3-2E8749977E20"
+
 # Create a Sites directories	
 mkdir $HOME/Sites
 mkdir $HOME/Sites/Tests	

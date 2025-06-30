@@ -1,9 +1,6 @@
 # Load Composer tools
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-# Load Node global installed binaries
-export PATH="$HOME/.node/bin:$PATH"
-
 # Use project specific binaries before global ones
 export PATH="node_modules/.bin:vendor/bin:$PATH"
 
@@ -16,8 +13,5 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Load custom commands
-export PATH="$DOTFILES/bin:$PATH"
-
-export LDFLAGS="-L/usr/local/opt/libffi/lib"
-export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+export PATH="$HOME/.dotfiles/bin:$PATH"
 
