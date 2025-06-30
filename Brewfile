@@ -21,6 +21,7 @@ brew 'node'
 brew 'yarn'
 
 # Apps
+cask '1password'
 cask 'bartender'
 cask 'brave-browser'
 cask 'cleanshot'
