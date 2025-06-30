@@ -47,7 +47,4 @@ Be careful when using these dotfiles because they change a lot of MacOS settings
 
 ## Still Missing
 
-- Activate right mouse click
-- Sleep time missmatch/error
-- Operator Mono font
-- Disable Mac sounds
+- Activate right mouse click 
