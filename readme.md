@@ -40,7 +40,7 @@ Be careful when using these dotfiles because they change a lot of MacOS settings
     - Davinci Resolve
     - Pixelmator Pro Demo (Dropbox/Backups)
 - Custom Settings
-    - Copy ssh config from 1Password to `~/.ssh/config`
+    - Copy ssh config from 1Password to `~/.ssh/config` (automate?)
     - PhpStorm: enable repository sync `https://github.com/christophrumpel/phpstorm-settings`
 - Set Permissions
     - Bartender
