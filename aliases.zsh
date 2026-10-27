@@ -144,17 +144,29 @@ alias clearlogs='truncate -s 0 $PWD/storage/logs/*.log'
 #-----------------------------------------------------------------------------------#
 
 # Share a local Herd site publicly via a Cloudflare quick tunnel
+# Prints the public URL, copies it to the clipboard and only shows errors after that
 # Usage: share (uses current folder name) or share my-site
 function share() {
 	local host="${1:-$(basename "$PWD")}.test"
+	local -a args=(--url "http://$host" --http-host-header "$host")
+	local line url
 
 	if [[ $(curl -s -o /dev/null -w '%{redirect_url}' "http://$host") == https://* ]]; then
 		# Site is secured with Herd (https)
-		cloudflared tunnel --url "https://$host" --http-host-header "$host" \
-			--origin-server-name "$host" --no-tls-verify
-	else
-		cloudflared tunnel --url "http://$host" --http-host-header "$host"
+		args=(--url "https://$host" --http-host-header "$host" --origin-server-name "$host" --no-tls-verify)
 	fi
+
+	echo "Starting tunnel for $host..."
+
+	cloudflared tunnel "${args[@]}" 2>&1 | while IFS= read -r line; do
+		if [[ -z "$url" && "$line" =~ 'https://[a-z0-9-]+\.trycloudflare\.com' ]]; then
+			url=$MATCH
+			print -n "$url" | pbcopy
+			echo "\n  $url  (copied to clipboard)\n\nIt may take a few seconds to be reachable. Press Ctrl+C to stop."
+		elif [[ "$line" == *" ERR "* ]]; then
+			echo "$line"
+		fi
+	done
 }
 
 #-----------------------------------------------------------------------------------#
