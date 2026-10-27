@@ -16,6 +16,7 @@ brew 'trash'
 brew 'tree'
 
 # Development
+brew 'cloudflared' # Used by the "share" function in aliases.zsh
 brew 'composer'
 brew 'node'
 brew 'yarn'
