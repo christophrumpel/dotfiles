@@ -50,3 +50,9 @@ export HERD_PHP_81_INI_SCAN_DIR="/Users/christophrumpel/Library/Application Supp
 
 # opencode
 export PATH=/Users/christophrumpel/.opencode/bin:$PATH
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+autoload -Uz compinit && compinit
+
+
+# Herd injected PHP 8.6 configuration.
+export HERD_PHP_86_INI_SCAN_DIR="/Users/christophrumpel/Library/Application Support/Herd/config/php/86"
