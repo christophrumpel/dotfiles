@@ -64,7 +64,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.40782788395881653
   },
-  "Right Option Key Sends" : 0,
+  "Right Option Key Sends" : 2,
   "Ansi 4 Color (Light)" : {
     "Red Component" : 0.53333336114883423,
     "Color Space" : "sRGB",
@@ -89,7 +89,26 @@
   },
   "Cursor Type" : 0,
   "Keyboard Map" : {
-
+    "0xf702-0x280000" : {
+      "Action" : 10,
+      "Text" : "b"
+    },
+    "0xf703-0x280000" : {
+      "Action" : 10,
+      "Text" : "f"
+    },
+    "0x7f-0x80000" : {
+      "Action" : 11,
+      "Text" : "0x17"
+    },
+    "0xf702-0x300000" : {
+      "Action" : 11,
+      "Text" : "0x01"
+    },
+    "0xf703-0x300000" : {
+      "Action" : 11,
+      "Text" : "0x05"
+    }
   },
   "Ansi 3 Color (Dark)" : {
     "Red Component" : 0.94901961088180542,
@@ -175,7 +194,7 @@
     "Green Component" : 0.16470588743686676
   },
   "Ambiguous Double Width" : false,
-  "Option Key Sends" : 0,
+  "Option Key Sends" : 2,
   "Ansi 3 Color" : {
     "Red Component" : 0.78058648109436035,
     "Color Space" : "sRGB",
@@ -472,7 +491,7 @@
     "Alpha Component" : 0.25,
     "Green Component" : 0.77217715978622437
   },
-  "Custom Directory" : "No",
+  "Custom Directory" : "Recycle",
   "Working Directory" : "\/Users\/christophrumpel",
   "ASCII Anti Aliased" : true,
   "Shortcut" : "",
