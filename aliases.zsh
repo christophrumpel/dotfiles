@@ -55,6 +55,8 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 
 alias gac="git add -A && git commit -m"
 alias gpc="git push origin HEAD"
+alias gwip="git add -A && git commit -m 'WIP'"
+alias gwipp="gwip && gpc"
 
 
 gsa ()
